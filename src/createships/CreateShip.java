@@ -21,14 +21,14 @@ import spacevehicle.spaceProbeExploration;
 public class CreateShip {
 
     /**
+     * Variable encargada de llevar un conteo de las naves instanciadas.
+     */
+    public int count = 7;
+    /**
      * Variable encargada de almacenar instancias de los tipos de naves
      * espaciales.
      */
     private ArrayList<SpaceVehicle> shipsCreated = new ArrayList<>();
-    /**
-     * Variable encargada de llevar un conteo de las naves instanciadas.
-     */
-    public int count = 7;
     Scanner in = new Scanner(System.in);
 
     /**
