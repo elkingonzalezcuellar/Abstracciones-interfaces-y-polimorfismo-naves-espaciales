@@ -14,12 +14,12 @@ import java.util.Scanner;
 public abstract class SpaceVehicle {
 
     public String name;
-    private int id;
     public double weight, thrust, size, height;
     public Date creationDate = new Date();
     public boolean status;
-    private double power, speed;
     protected String ownerCountry, destination;
+    private int id;
+    private double power, speed;
     private String energySource;
     Scanner in = new Scanner(System.in);
 
