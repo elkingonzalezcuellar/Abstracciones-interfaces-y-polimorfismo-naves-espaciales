@@ -166,7 +166,7 @@ public class CreateShip {
                 System.out.println("    2. Sonda Mensajera");
                 System.out.println("    3. Sonda para : Estación Espacial Internacional");
                 System.out.println("    4. Sonda de exploración");
-                System.out.println("    5. Menu principal");
+                System.out.println("    5. Volver");
                 System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 selection = in.nextInt();
 
