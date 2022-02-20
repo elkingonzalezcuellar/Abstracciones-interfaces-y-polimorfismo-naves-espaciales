@@ -166,7 +166,7 @@ public class CreateShip {
                 System.out.println("    2. Sonda Mensajera");
                 System.out.println("    3. Sonda para : Estación Espacial Internacional");
                 System.out.println("    4. Sonda de exploración");
-                System.out.println("    5. Volver");
+                System.out.println("    5. Menu principal");
                 System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 selection = in.nextInt();
 
@@ -207,7 +207,7 @@ public class CreateShip {
                 typeFiveShip.RequestDataShip();
                 typeFiveShip.Fuction();
                 typeFiveShip.setId(count);
-                setShipsCreated(shipsCreated);
+                setShipsCreated(typeFiveShip);
             } else if (selection == 5) {
                 System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 flag = 2;
@@ -224,7 +224,7 @@ public class CreateShip {
     }
 
     /**
-     * @param shipsCreated El
+     * @param shipsCreated the shipsCreated to set
      */
     public void setShipsCreated(ArrayList<SpaceVehicle> shipsCreated) {
         this.shipsCreated = shipsCreated;
@@ -234,6 +234,9 @@ public class CreateShip {
         this.shipsCreated.add(name);
     }
 
+    /**
+     * Se crean la naves por defecto que fueron mencionadas en la literuatura
+     */
     public void DefaultShips() {
         SpaceVehicle Apolo = new MannedSpacecraft("Apolo", 7, 727.5, 183.16, 331.6, 4.17, false, 600, "EEUU", "Luna", "combustible", 360, 9, 4);
         SpaceVehicle defaultMannedSpacecraft = new MannedSpacecraft("Skylab", 1, 77.5, 383.1, 351.6, 11.1, false, 600, "EEUU", "Titan", "combustible", 350, 9, 3);

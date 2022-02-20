@@ -4,14 +4,17 @@ import java.util.Date;
 import java.util.Scanner;
 
 /**
+ * Representación general de una nave espacial en base a la lectura "Naves
+ * espaciales que pasaron a la historia. Clasificación.", se identificaron los
+ * atributos y metodos generales que cumplian todos los tipos de naves
+ * espaciales.
  *
- * @author PC
+ * @author Elkin Estiven González Cuellar
  */
 public abstract class SpaceVehicle {
 
     public String name;
-    private int id = 7;
-    private int id2 = 0;
+    private int id;
     public double weight, thrust, size, height;
     public Date creationDate = new Date();
     public boolean status;
@@ -27,6 +30,22 @@ public abstract class SpaceVehicle {
 
     }
 
+    /**
+     * Contructor general de una nave espacial.
+     *
+     * @param name
+     * @param id
+     * @param weight
+     * @param thrust
+     * @param size
+     * @param height
+     * @param status
+     * @param power
+     * @param ownerCountry
+     * @param destination
+     * @param energySource
+     * @param speed
+     */
     public SpaceVehicle(String name, int id, double weight, double thrust,
             double size, double height, boolean status, double power,
             String ownerCountry, String destination, String energySource, double speed) {
@@ -44,6 +63,9 @@ public abstract class SpaceVehicle {
         this.speed = speed;
     }
 
+    /**
+     * Da información acerca de los atributos que han sido asignado a la nave.
+     */
     public String toString() {
         return "\n" + "Nombre: " + name
                 + " | id: " + id
@@ -62,189 +84,196 @@ public abstract class SpaceVehicle {
     }
 
     /**
-     * @return the name
+     * @return Nombre de la nave.
      */
     public String getName() {
         return name;
     }
 
     /**
-     * @param name the name to set
+     * @param name Asigna el nombre a la nave.
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * @return the id
+     * @return numero de identificación
      */
     public int getId() {
         return id;
     }
 
     /**
-     * @param id the id to set
+     * @param id Asigna un numero de identificación.
      */
     public void setId(int id) {
         this.id = id;
     }
 
     /**
-     * @return the weight
+     * @return Peso que tiene la nave.
      */
     public double getWeight() {
         return weight;
     }
 
     /**
-     * @param weight the weight to set
+     * @param weight Asigna el peso que tendra la nave.
      */
     public void setWeight(double weight) {
         this.weight = weight;
     }
 
     /**
-     * @return the thrust
+     * @return fuerza de acción que realiza la nave para acelerar.
      */
     public double getThrust() {
         return thrust;
     }
 
     /**
-     * @param thrust the thrust to set
+     * @param thrust Asigna la capacidad de empuje que tendra la nave.
      */
     public void setThrust(double thrust) {
         this.thrust = thrust;
     }
 
     /**
-     * @return the size
+     * @return Volumen de la nave.
      */
     public double getSize() {
         return size;
     }
 
     /**
-     * @param size the size to set
+     * @param size Asigna el tamaño que tendrá la nave.
      */
     public void setSize(double size) {
         this.size = size;
     }
 
     /**
-     * @return the height
+     * @return Altura
      */
     public double getHeight() {
         return height;
     }
 
     /**
-     * @param height the height to set
+     * @param height Altura
      */
     public void setHeight(double height) {
         this.height = height;
     }
 
     /**
-     * @return the creationDate
+     * @return Fecha en que la nave empezo su actividad
      */
     public Date getCreationDate() {
         return creationDate;
     }
 
     /**
-     * @param creationDate the creationDate to set
+     * @param creationDate tipo Date
      */
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
     }
 
     /**
-     * @return the status
+     * @return Si la nave sigue en actividad o ya fue retirada o destruida.
      */
     public boolean isStatus() {
         return status;
     }
 
     /**
-     * @param status the status to set
+     * @param status Asigna un Estado de actividad True activo False Inactivo.
      */
     public void setStatus(boolean status) {
         this.status = status;
     }
 
     /**
-     * @return the power
+     * @return Potencia
      */
     public double getPower() {
         return power;
     }
 
     /**
-     * @param power the power to set
+     * @param power cantidad de trabajo que se realiza por unidad de tiempo
      */
     public void setPower(double power) {
         this.power = power;
     }
 
     /**
-     * @return the speed
+     * @return cambio de posición de un objeto con respecto al tiempo.
      */
     public double getSpeed() {
         return speed;
     }
 
     /**
-     * @param speed the speed to set
+     * @param speed La velocidad que debe tener la nave.
      */
     public void setSpeed(double speed) {
         this.speed = speed;
     }
 
     /**
-     * @return the ownerCountry
+     * @return Pais creador.
      */
     public String getOwnerCountry() {
         return ownerCountry;
     }
 
     /**
-     * @param ownerCountry the ownerCountry to set
+     * @param ownerCountry
      */
     public void setOwnerCountry(String ownerCountry) {
         this.ownerCountry = ownerCountry;
     }
 
     /**
-     * @return the destination
+     * @return Destino o ubicación que tendra la nave ejemplo : Marte.
      */
     public String getDestination() {
         return destination;
     }
 
     /**
-     * @param destination the destination to set
+     * @param destination Lugar a donde va dirigida.
      */
     public void setDestination(String destination) {
         this.destination = destination;
     }
 
     /**
-     * @return the energySource
+     * @return materiales sólidos, líquidos o gaseosos que proporcionan la
+     * energia para el funcionamiento.
      */
     public String getEnergySource() {
         return energySource;
     }
 
     /**
-     * @param energySource the energySource to set
+     * @param energySource
      */
     public void setEnergySource(String energySource) {
         this.energySource = energySource;
     }
 
+    /**
+     * Actividad particular que realiza la nave.
+     */
     public abstract void Fuction();
 
+    /**
+     * Pide todos los atributos por pantalla para instanciar una nave
+     */
     public void RequestDataShip() {
 
         System.out.println("Escribe el nombre de tu nave: ");
